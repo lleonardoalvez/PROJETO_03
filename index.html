@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO 03</title>
+    <style>
+        body { font: 16pt Calibri; }
+        button { font-size: 16pt; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Calcule sua nota aqui.</h1>
+    <button onclick="somar()">Iniciar</button>
+    <section id="res">
+        <p>Sua nota</p>
+    </section>
+    <script>
+        function somar() {
+            let n1 = Number(window.prompt('Digite a primeira nota: '))
+            let n2 = Number(window.prompt('Digite a segunda nota:'))
+            soma = n1 + n2
+
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p>A soma entre suas notas <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${soma}</strong>!</p>`
+        }
+    </script>
+</body>
+</html>
